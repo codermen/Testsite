@@ -1,0 +1,24 @@
+##
+# Adding this as superType will prevent inserting this page type below normal pages
+#
+# [Youtube Tutorial explaining constraints](https://www.youtube.com/watch?v=ZCRYsYvxXFI&t=247s)
+#
+# Example:
+# Let's say you have a have a news overview of news pages below. To force
+# news pages to be created only directly below:
+#
+# 'Codermen.Testsite:Document.NewsOverview':
+#   superTypes:
+#     'Codermen.Testsite:Document.AbstractPage': true
+#   constraints:
+#     nodeTypes:
+#       'Codermen.Testsite:Document.Restricted': false
+#
+# 'Codermen.Testsite:Content.News':
+#   superTypes:
+#     'Codermen.Testsite:Document.AbstractPage': true
+#     'Codermen.Testsite:Constraint.Document.Restricted': true
+#
+##
+'Codermen.Testsite:Constraint.Document.Restricted':
+  abstract: true

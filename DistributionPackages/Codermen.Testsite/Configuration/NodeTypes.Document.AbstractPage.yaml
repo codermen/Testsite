@@ -1,0 +1,14 @@
+'Codermen.Testsite:Document.AbstractPage':
+  abstract: true
+  superTypes:
+    'Neos.Neos:Document': true
+  childNodes:
+    main:
+      type: 'Neos.Neos:ContentCollection'
+      constraints:
+        nodeTypes:
+          'Codermen.Testsite:Constraint.Content.Restricted': false
+  constraints:
+    nodeTypes:
+      'Codermen.Testsite:Document.HomePage': false
+      'Codermen.Testsite:Constraint.Document.Restricted': false

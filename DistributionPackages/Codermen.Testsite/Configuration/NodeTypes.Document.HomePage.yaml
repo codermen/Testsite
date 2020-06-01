@@ -1,0 +1,32 @@
+
+'Codermen.Testsite:Document.HomePage':
+  superTypes:
+    'Codermen.Testsite:Document.AbstractPage': true
+    'Codermen.Testsite:Constraint.Document.Restricted': true
+    'Codermen.Testsite:Mixin.InspectorGeneral': true
+  ui:
+    label: i18n
+    icon: icon-globe
+  properties:
+    footerInfo:
+      type: string
+      ui:
+        inlineEditable: true
+        inline:
+          editorOptions:
+            formatting:
+              a: true
+            placeholder: i18n
+    footerItems:
+      type: references
+      ui:
+        label: i18n
+        reloadIfChanged: true
+        inspector:
+          group: general
+          editorOptions:
+            nodeTypes:
+              - 'Neos.Neos:Document'
+  childNodes:
+    notfound:
+      type: 'Codermen.Testsite:Document.Page'
